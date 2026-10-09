@@ -1,5 +1,6 @@
 use std::fs;
 use std::time::SystemTime;
+mod value;
 
 fn load_lines(path: &str) -> Vec<String> { 
     // load file content into String vector:
@@ -33,7 +34,7 @@ fn randomize(strings: &[String]) -> Vec<String> {
         v.swap(i, j);
     }
     v
-}
+}   
 
 fn join_strings(strings: &[String], delimiter: &str) -> String {
     let str = strings.join(delimiter);
